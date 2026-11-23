@@ -36,7 +36,7 @@ const MENU = [
   { id: 1, cat: "entradas", name: "Burrata con tomates asados", price: 9800,
     desc: "Burrata cremosa, tomates cherry confitados, pesto de albahaca y pan de masa madre.",
     tags: ["veg", "chef"], allergens: ["Lácteos", "Gluten", "Frutos secos"] },
-  { id: 2, cat: "entradas", name: "Croquetas de jamón", price: 7200,
+  { id: 2, cat: "entradas", name: "Croquetas de jamón", price: 7900,
     desc: "Seis croquetas caseras de jamón serrano con alioli suave.",
     tags: [], allergens: ["Gluten", "Lácteos", "Huevo"] },
   { id: 3, cat: "entradas", name: "Hummus de garbanzos", price: 6500,

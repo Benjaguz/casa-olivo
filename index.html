@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Casa Olivo · Carta de cocina mediterránea</title>
+  <meta name="description" content="Carta de Casa Olivo: cocina mediterránea de temporada desde 1998. Entradas, principales, pastas frescas, postres y bebidas. Av. del Puerto 214.">
+  <meta name="theme-color" content="#1c2214">
+  <meta property="og:type" content="restaurant.menu">
+  <meta property="og:title" content="Casa Olivo · Carta">
+  <meta property="og:description" content="Producto de temporada, fuego lento y recetas de familia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231c2214'/%3E%3Cellipse cx='16' cy='17' rx='6.5' ry='8.5' fill='%23b8c48a' transform='rotate(-20 16 17)'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400..700&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+
+  <!-- Marca la página como "con JS" antes de pintar, para que las animaciones de entrada no parpadeen -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#carta">Saltar a la carta</a>
+
+  <!-- Ilustraciones de línea por categoría (se reutilizan en tarjetas, detalle y pedido) -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="ico-entradas" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="38" rx="25" ry="10"/>
+      <ellipse cx="32" cy="36" rx="17" ry="5.5"/>
+      <ellipse cx="25" cy="28" rx="4.2" ry="5.6" transform="rotate(-25 25 28)"/>
+      <ellipse cx="34" cy="25" rx="4.2" ry="5.6" transform="rotate(15 34 25)"/>
+      <ellipse cx="41" cy="30" rx="4.2" ry="5.6" transform="rotate(-10 41 30)"/>
+      <path d="M34 19.5c1-3 3-5 6-6"/>
+    </symbol>
+    <symbol id="ico-principales" viewBox="0 0 64 64">
+      <path d="M8 46h48"/>
+      <path d="M12 46a20 20 0 0 1 40 0"/>
+      <path d="M32 26v-5"/>
+      <path d="M28 21h8"/>
+      <path d="M19 40a14 14 0 0 1 8-9"/>
+    </symbol>
+    <symbol id="ico-pastas" viewBox="0 0 64 64">
+      <path d="M22 8v14a5 5 0 0 0 10 0V8"/>
+      <path d="M27 8v12"/>
+      <path d="M27 27v29"/>
+      <path d="M38 26c6-3 13 0 13 7s-7 10-12 7-3-9 2-9 5 5 1 6"/>
+      <path d="M36 46c6 4 15 2 18-5"/>
+    </symbol>
+    <symbol id="ico-postres" viewBox="0 0 64 64">
+      <path d="M14 44h36"/>
+      <path d="M16 44V32l32-10v22"/>
+      <path d="M16 32l32-10"/>
+      <path d="M16 38h32"/>
+      <path d="M40 22c0-4 2-7 5-8"/>
+      <circle cx="46" cy="13" r="2.5"/>
+      <path d="M10 50h44"/>
+    </symbol>
+    <symbol id="ico-bebidas" viewBox="0 0 64 64">
+      <path d="M22 8h20c1 12-2 22-10 22S21 20 22 8z"/>
+      <path d="M23.5 17h17"/>
+      <path d="M32 30v20"/>
+      <path d="M23 54h18"/>
+    </symbol>
+    <symbol id="ico-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="ico-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="ico-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="ico-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="ico-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></symbol>
+    <symbol id="ico-filter" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M4 20C6 10 12 5 20 4c-1 8-6 14-16 16z"/><path d="M4 20l9-9"/></symbol>
+  </svg>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="inicio">
+    <svg class="hero__branch" viewBox="0 0 640 800" aria-hidden="true" focusable="false">
+      <path class="branch__stem" d="M560 0C520 140 470 250 420 360S320 600 200 800"/>
+      <g class="branch__leaves">
+        <g transform="translate(548 40) rotate(150) scale(.8)"><g class="leaf" style="--i:0"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(528 100) rotate(60)"><g class="leaf" style="--i:1"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(494 191) rotate(160) scale(1.1)"><g class="leaf" style="--i:2"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(457 277) rotate(55) scale(1.15)"><g class="leaf" style="--i:3"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(420 360) rotate(168) scale(1.2)"><g class="leaf" style="--i:4"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(381 447) rotate(62) scale(1.1)"><g class="leaf" style="--i:5"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(336 546) rotate(165) scale(1.05)"><g class="leaf" style="--i:6"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(278 662) rotate(70) scale(.95)"><g class="leaf" style="--i:7"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+        <g transform="translate(232 740) rotate(150) scale(.8)"><g class="leaf" style="--i:8"><path d="M0 0C14-11 52-13 84 0C52 13 14 11 0 0Z"/><path d="M6 0H76"/></g></g>
+      </g>
+      <g class="branch__olives">
+        <g class="olive" style="--i:0"><path d="M440 318q-6 14-20 22"/><ellipse cx="447" cy="300" rx="14" ry="19" transform="rotate(-20 447 300)"/></g>
+        <g class="olive" style="--i:1"><path d="M360 500q14 6 22 22"/><ellipse cx="392" cy="538" rx="13" ry="18" transform="rotate(-35 392 538)"/></g>
+        <g class="olive" style="--i:2"><path d="M300 620q-14 2-24 16"/><ellipse cx="262" cy="652" rx="12" ry="17" transform="rotate(30 262 652)"/></g>
+      </g>
+    </svg>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span>Cocina mediterránea</span>
+        <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+        <span>Desde 1998</span>
+      </p>
+      <h1 class="hero__title" aria-label="Casa Olivo">
+        <span class="hero__line" aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">a</span><span class="char" style="--i:2">s</span><span class="char" style="--i:3">a</span></span>
+        <span class="hero__line hero__line--italic" aria-hidden="true"><span class="char" style="--i:4">O</span><span class="char" style="--i:5">l</span><span class="char" style="--i:6">i</span><span class="char" style="--i:7">v</span><span class="char" style="--i:8">o</span></span>
+      </h1>
+      <p class="hero__lede">Producto de temporada, fuego lento y recetas de&nbsp;familia.</p>
+      <a class="hero__cta" href="#carta">
+        <span>Ver la carta</span>
+        <span class="hero__cta-icon"><svg aria-hidden="true"><use href="#ico-arrow"/></svg></span>
+      </a>
+    </div>
+
+    <dl class="hero__meta">
+      <div><dt>Dirección</dt><dd>Av. del Puerto 214</dd></div>
+      <div><dt>Horario</dt><dd>Mar a Dom · 12:30 – 23:30</dd></div>
+    </dl>
+  </header>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <div class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="#inicio" aria-label="Casa Olivo, volver al inicio">Casa <em>Olivo</em></a>
+      <nav class="cats" aria-label="Categorías de la carta">
+        <div class="cats__track" id="cats">
+          <span class="cats__indicator" aria-hidden="true"></span>
+        </div>
+      </nav>
+      <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel">
+        <svg aria-hidden="true"><use href="#ico-filter"/></svg>
+        <span class="filter-toggle__label">Buscar y filtrar</span>
+        <span class="filter-toggle__count" id="filterCount" hidden>0</span>
+      </button>
+    </div>
+
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-panel__clip">
+        <div class="filter-panel__inner">
+          <label class="search">
+            <span class="visually-hidden">Buscar en la carta</span>
+            <svg aria-hidden="true"><use href="#ico-search"/></svg>
+            <input type="search" id="search" placeholder="Buscar un plato o ingrediente" autocomplete="off" enterkeyhint="search">
+          </label>
+          <div class="chips" id="chips" role="group" aria-label="Preferencias alimentarias"></div>
+          <button class="link-btn" id="clearFilters" type="button" hidden>Limpiar filtros</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CARTA ===================== -->
+  <main class="carta" id="carta" tabindex="-1">
+    <noscript><p class="noscript">Activá JavaScript para ver la carta completa.</p></noscript>
+  </main>
+
+  <div class="empty" id="empty" hidden>
+    <p class="empty__title">No encontramos platos con esos filtros.</p>
+    <button class="btn btn--outline" id="emptyClear" type="button">Limpiar filtros</button>
+  </div>
+
+  <!-- ===================== PIE ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__mark" data-reveal>Casa <em>Olivo</em></p>
+      <div class="footer__cols">
+        <div data-reveal>
+          <h2 class="footer__label">Dónde</h2>
+          <p>Av. del Puerto 214</p>
+        </div>
+        <div data-reveal>
+          <h2 class="footer__label">Cuándo</h2>
+          <p>Martes a domingo<br>12:30 – 23:30</p>
+        </div>
+        <div data-reveal>
+          <h2 class="footer__label">A tener en cuenta</h2>
+          <p>Consultá con el personal por alergias e intolerancias. Precios con IVA incluido.</p>
+        </div>
+      </div>
+      <p class="footer__base"><span>Cocina mediterránea · Desde 1998</span><a href="#inicio">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+
+  <!-- ===================== PEDIDO ===================== -->
+  <button class="order-bar" id="orderBar" type="button" aria-controls="drawer" aria-expanded="false" tabindex="-1">
+    <span class="order-bar__count" id="orderCount">0</span>
+    <span class="order-bar__label">Ver mi pedido</span>
+    <span class="order-bar__total" id="orderBarTotal">$ 0</span>
+  </button>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-labelledby="drawerTitle" role="dialog" aria-modal="true" inert>
+    <div class="drawer__handle" aria-hidden="true"></div>
+    <div class="drawer__head">
+      <div>
+        <p class="drawer__kicker">Resumen</p>
+        <h2 class="drawer__title" id="drawerTitle">Mi pedido</h2>
+      </div>
+      <button class="icon-btn" id="closeDrawer" type="button" aria-label="Cerrar pedido">
+        <svg aria-hidden="true"><use href="#ico-close"/></svg>
+      </button>
+    </div>
+    <ul class="drawer__list" id="orderList"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Total</span><strong id="orderTotal">$ 0</strong></div>
+      <p class="drawer__hint">Mostrale este resumen a tu mozo para hacer el pedido.</p>
+      <button class="link-btn" id="clearOrder" type="button">Vaciar pedido</button>
+    </div>
+  </aside>
+
+  <!-- ===================== DETALLE DEL PLATO ===================== -->
+  <dialog class="dish-dialog" id="dishDialog" aria-labelledby="dlgName">
+    <div class="dish-dialog__media" id="dlgMedia"></div>
+    <div class="dish-dialog__body">
+      <button class="icon-btn dish-dialog__close" type="button" data-close aria-label="Cerrar detalle">
+        <svg aria-hidden="true"><use href="#ico-close"/></svg>
+      </button>
+      <p class="dish-dialog__kicker" id="dlgKicker"></p>
+      <h2 class="dish-dialog__name" id="dlgName"></h2>
+      <p class="dish-dialog__desc" id="dlgDesc"></p>
+      <ul class="tags" id="dlgTags"></ul>
+      <div class="dish-dialog__allergens">
+        <h3>Alérgenos</h3>
+        <p id="dlgAllergens"></p>
+      </div>
+      <div class="dish-dialog__actions">
+        <data class="dish-dialog__price" id="dlgPrice"></data>
+        <button class="btn" id="dlgAdd" type="button">
+          <svg aria-hidden="true"><use href="#ico-plus"/></svg>
+          <span>Agregar al pedido</span>
+        </button>
+      </div>
+      <p class="dish-dialog__inorder" id="dlgInOrder" aria-live="polite"></p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js?v=2"></script>
+  <script src="js/motion.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
+</body>
+</html>

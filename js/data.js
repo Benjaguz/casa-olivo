@@ -62,7 +62,7 @@ const MENU = [
   { id: 9, cat: "principales", name: "Bowl de quinoa y vegetales", price: 11200,
     desc: "Quinoa, palta, garbanzos especiados, zanahoria asada y aderezo de tahini.",
     tags: ["vegan", "gf", "spicy"], allergens: ["Sésamo"] },
-  { id: 20, cat: "principales", name: "Milanesa Napolitana con pure de zapallo", price: 30000, desc: "2 milanesas de carne con queso y tomate encima de la mejor calidad, zapallo traido directamente de la huerta.", tags: ["spicy", "chef"], allergens: [""]},
+  { id: 20, cat: "principales", name: "Milanesa Napolitana con pure de zapallo", price: 30000, desc: "2 milanesas de carne con queso y tomate encima de la mejor calidad, zapallo traido directamente de la huerta.", tags: ["spicy", "chef"], allergens: [] },
 
   // Pastas
   { id: 10, cat: "pastas", name: "Sorrentinos de calabaza", price: 12900,

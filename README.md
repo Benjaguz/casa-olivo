@@ -10,4 +10,4 @@ Fue elaborada con Claude Code, estoy aprendiendo a usarlo y hice bastantes modif
 - CSS
 - JS
 
-Benjaguz- [https://github.com/Benjaguz]
+Benjaguz- https://github.com/Benjaguz Link de la página - https://benjaguz.github.io/casa-olivo/
